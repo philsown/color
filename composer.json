@@ -1,0 +1,22 @@
+{
+    "name": "idealogica/color",
+    "description": "hackerone/color color manipulation class composer adaptation.",
+    "keywords": ["color", "saturate", "desaturate", "lighten", "darken", "mix"],
+    "homepage": "https://github.com/hackerone/color",
+    "authors": [
+        {
+            "name": "Ganesh",
+            "email": "hackerone@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3"
+    },
+    "autoload": 
+    {
+        "classmap":
+        [
+            "Color.php"
+        ]    
+    }
+}
