@@ -1,8 +1,8 @@
 {
-    "name": "philsown/colors",
+    "name": "philsown/color",
     "description": "adaptation of idealogica/color to add better namespace, idealogica/color was an adaptation of hackerone/color color manipulation class composer adaptation.",
     "keywords": ["color", "saturate", "desaturate", "lighten", "darken", "mix"],
-    "homepage": "https://github.com/philsown/colors",
+    "homepage": "https://github.com/philsown/color",
     "authors": [
         {
             "name": "Ganesh",
