@@ -1,6 +1,6 @@
 <?php
 
-namespace Colors;
+namespace Color;
 
 class Color
 {
