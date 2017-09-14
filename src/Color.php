@@ -2,6 +2,8 @@
 
 namespace Color;
 
+use \Exception
+
 class Color
 {
 	private $_color, $_mode, $_hsl;
