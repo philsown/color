@@ -10,27 +10,27 @@ if (function_exists('ColorColorCall')) {
 if (function_exists('lighten')) {
     function lighten($color, $p)
     {
-        return $ColorColorCall('lighten', $color, $p);
+        return ColorColorCall('lighten', $color, $p);
     }
 }
 
 if (function_exists('darken')) {
     function darken($color, $p)
     {
-        return $ColorColorCall('darken', $color, $p);
+        return ColorColorCall('darken', $color, $p);
     }
 }
 
 if (function_exists('saturate')) {
     function saturate($color, $p)
     {
-        return $ColorColorCall('saturate', $color, $p);
+        return ColorColorCall('saturate', $color, $p);
     }
 }
 
 if (function_exists('desaturate')) {
     function desaturate($color, $p)
     {
-        return $ColorColorCall('desaturate', $color, $p);
+        return ColorColorCall('desaturate', $color, $p);
     }
 }
