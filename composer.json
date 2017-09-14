@@ -1,12 +1,20 @@
 {
-    "name": "idealogica/color",
-    "description": "hackerone/color color manipulation class composer adaptation.",
+    "name": "philsown/colors",
+    "description": "adaptation of idealogica/color to add better namespace, idealogica/color was an adaptation of hackerone/color color manipulation class composer adaptation.",
     "keywords": ["color", "saturate", "desaturate", "lighten", "darken", "mix"],
-    "homepage": "https://github.com/hackerone/color",
+    "homepage": "https://github.com/philsown/colors",
     "authors": [
         {
             "name": "Ganesh",
             "email": "hackerone@gmail.com"
+        },
+        {
+            "name": "idealogica",
+            "homepage": "https://github.com/idealogica/color"
+        },
+        {
+            "name": "Phillip Harrington",
+            "email": "phillip@phillipharrington.com"
         }
     ],
     "require": {
@@ -14,9 +22,8 @@
     },
     "autoload": 
     {
-        "classmap":
-        [
-            "Color.php"
-        ]    
+        "psr-4": {
+            "Colors\\": "src/"
+        }
     }
 }
