@@ -50,6 +50,15 @@ class Color
     }
 
     /**
+     * Returns the Color object
+     * @return Color
+     */
+    public static function create($color, $mode = null)
+    {
+        return new Color($color, $mode);
+    }
+
+    /**
      * darkens color by the given value p
      * @return Color
      */
@@ -145,15 +154,6 @@ class Color
         if ($p > 1)$p/=100;
         $number *= 1-$p;
         return ($number < 0) ? 0 : round($number,2);
-    }
-
-    /**
-     * Returns the Color object
-     * @return Color
-     */
-    public static function set($color, $mode = null)
-    {
-        return new Color($color, $mode);
     }
 
     /**
