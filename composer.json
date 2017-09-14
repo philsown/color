@@ -24,6 +24,9 @@
     {
         "psr-4": {
             "Color\\": "src/"
-        }
+        },
+        "files": [
+            "src/helpers.php"
+        ],
     }
 }
