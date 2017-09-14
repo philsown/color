@@ -1,8 +1,43 @@
 <?php
 
-class Color{
+namespace Colors;
 
+class Color
+{
 	private $_color, $_mode, $_hsl;
+
+	public function __construct($color = null, $mode = null){
+		
+		if($mode)$this->_mode = substr($mode,0,3);
+		else $this->_mode = $this->_getMode($color);
+		if($color){
+			$this->_color = $color;
+			$this->_hsl = $this->_getHSL($this->_color, $this->_mode);
+		}
+		
+	}
+
+	/**
+	* Magic Function to output color in the correct mode
+	* @return Array/String color
+	**/
+	public function __get($t){
+		switch(strtolower($t)){
+			case 'hsl' : return $this->_hsl;
+			break;
+			case 'rgb' : return $this->_getRGB();
+			break;
+			case 'hex' : return $this->_getHex();
+		}
+	}
+
+	/**
+	*	Returns the string/array representation of the color
+	*	@return String/Array color
+	*/
+	public function __toString(){
+		return $this->__get($this->_mode);
+	}
 
 	/**
 	*	darkens color by the given value p
@@ -90,44 +125,11 @@ class Color{
 	}
 
 	/**
-	*	Returns the string/array representation of the color
-	*	@return String/Array color
-	*/
-	public function __toString(){
-		return $this->__get($this->_mode);
-	}
-
-	/**
 	* Returns the Color object
 	* @return Color
 	*/
 	public static function set($color, $mode = null){
 		return new Color($color, $mode);
-	}
-
-	/**
-	* Magic Function to output color in the correct mode
-	* @return Array/String color
-	**/
-	public function __get($t){
-		switch(strtolower($t)){
-			case 'hsl' : return $this->_hsl;
-			break;
-			case 'rgb' : return $this->_getRGB();
-			break;
-			case 'hex' : return $this->_getHex();
-		}
-	}
-
-	public function __construct($color = null, $mode = null){
-		
-		if($mode)$this->_mode = substr($mode,0,3);
-		else $this->_mode = $this->_getMode($color);
-		if($color){
-			$this->_color = $color;
-			$this->_hsl = $this->_getHSL($this->_color, $this->_mode);
-		}
-		
 	}
 
 	/**
@@ -346,6 +348,4 @@ class Color{
 	private function _hsl2hex($hsl){
 		return $this->_rgb2hex($this->_hsl2rgb($hsl));
 	}
-
 }
-?>
